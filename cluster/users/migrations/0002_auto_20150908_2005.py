@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import django.contrib.gis.db.models.fields
 
 
 class Migration(migrations.Migration):
@@ -12,11 +11,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AlterModelManagers(
-            name='user',
-            managers=[
-            ],
-        ),
         migrations.AddField(
             model_name='user',
             name='age',
@@ -24,7 +18,12 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='user',
-            name='location',
-            field=django.contrib.gis.db.models.fields.PointField(srid=4326, null=True),
+            name='lat',
+            field=models.FloatField(null=True),
+        ),
+        migrations.AddField(
+            model_name='user',
+            name='lng',
+            field=models.FloatField(null=True),
         ),
     ]

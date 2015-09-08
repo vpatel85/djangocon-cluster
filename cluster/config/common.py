@@ -81,9 +81,16 @@ class Common(Configuration):
         ("Author", 'richard.hendriks@piedpiper.com'),
     )
 
-    # Postgres
-    DATABASES = values.DatabaseURLValue('postgis://localhost/cluster')
-
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': join(BASE_DIR, 'db.sqlite3'),
+            'USER': '',
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': '',
+        }
+    }
     # General
     TIME_ZONE = 'UTC'
     LANGUAGE_CODE = 'en-us'
