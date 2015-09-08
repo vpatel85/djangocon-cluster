@@ -1,0 +1,10 @@
+site_name: cluster
+site_description: clustering people at djangocon 2015
+repo_url: https://github.com/vpatel85/djangocon-web
+site_dir: site
+copyright: Copyright &copy; 2015, <a href="https://github.com/vpatel85">vpatel85</a>.
+
+pages:
+  - Home: 'index.md'
+  - API:
+    - Authentication: 'api/authentication.md'
