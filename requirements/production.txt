@@ -1,10 +1,6 @@
 # Dependencies related to deploying djangocon-web
 -r base.txt
 
-# WSGI Handler
-gevent==1.0.2
-gunicorn==19.3.0
-
 # Static and Media Storage
 django-storages-redux==1.2.3
 
